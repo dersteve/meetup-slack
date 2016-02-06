@@ -28,6 +28,7 @@ begin
   end
 end
   status 200
+  content-type "application/json"
   body response
 end
 
@@ -95,25 +96,27 @@ end
   cldr_secondtime = final_secondtime.localize
   get_secondtime = "#{cldr_secondtime.to_short_s} #{cldr_secondtime.to_date.to_full_s}"
 
-  response = { 
-      #title: "#{get_firstname}", 
-      #title_link: "#{get_firsturl}", 
-      text: "#{get_firsttime}\n#{firstlocation}", 
-      #fields: [ 
-      #    { 
-      #        title: "RSVPs", 
-      #        value: "#{get_firstrsvpcount}", 
-      #        short: true 
-      #    }, 
+  response = {
+      #title: "#{get_firstname}",
+      #title_link: "#{get_firsturl}",
+      text: "#{get_firsttime}\n#{firstlocation}",
+      response_type: "in_channel",
+
+      #fields: [
       #    {
-      #        title: "Waitlist", 
-      #        value: "#{get_firstwaitlistcount}", 
-      #        short: true }, 
-      #    { 
-      #        title: "Following Meetup:", 
-      #        value: "<#{get_secondurl}|#{get_secondname}> - #{get_secondtime}", 
-      #        short: false } 
-      #        ] 
+      #        title: "RSVPs",
+      #        value: "#{get_firstrsvpcount}",
+      #        short: true
+      #    },
+      #    {
+      #        title: "Waitlist",
+      #        value: "#{get_firstwaitlistcount}",
+      #        short: true },
+      #    {
+      #        title: "Following Meetup:",
+      #        value: "<#{get_secondurl}|#{get_secondname}> - #{get_secondtime}",
+      #        short: false }
+      #        ]
               }
   end
 
