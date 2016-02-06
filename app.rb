@@ -99,21 +99,21 @@ end
       #title: "#{get_firstname}", 
       #title_link: "#{get_firsturl}", 
       text: "#{get_firsttime}\n#{firstlocation}", 
-      fields: [ 
-          { 
-              title: "RSVPs", 
-              value: "#{get_firstrsvpcount}", 
-              short: true 
-          }, 
-          {
-              title: "Waitlist", 
-              value: "#{get_firstwaitlistcount}", 
-              short: true }, 
-          { 
-              title: "Following Meetup:", 
-              value: "<#{get_secondurl}|#{get_secondname}> - #{get_secondtime}", 
-              short: false } 
-              ] 
+      #fields: [ 
+      #    { 
+      #        title: "RSVPs", 
+      #        value: "#{get_firstrsvpcount}", 
+      #        short: true 
+      #    }, 
+      #    {
+      #        title: "Waitlist", 
+      #        value: "#{get_firstwaitlistcount}", 
+      #        short: true }, 
+      #    { 
+      #        title: "Following Meetup:", 
+      #        value: "<#{get_secondurl}|#{get_secondname}> - #{get_secondtime}", 
+      #        short: false } 
+      #        ] 
               }
   end
 
