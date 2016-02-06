@@ -28,7 +28,7 @@ begin
   end
 end
   status 200
-  content-type "application/json"
+  content_type = "application/json"
   body response
 end
 
