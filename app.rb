@@ -21,9 +21,9 @@ begin
   # params[:text] = params[:text].sub(params[:trigger_word], "").strip.gsub(/:/, '')
   unless params[:token] != ENV["OUTGOING_WEBHOOK_TOKEN"]
     response = { text: "Next Meetup:" }
-    response[:attachments] = [ generate_attachment ]
-    response[:username] = ENV["BOT_USERNAME"] unless ENV["BOT_USERNAME"].nil?
-    response[:icon_emoji] = ENV["BOT_ICON"] unless ENV["BOT_ICON"].nil?
+    #response[:attachments] = [ generate_attachment ]
+    #response[:username] = ENV["BOT_USERNAME"] unless ENV["BOT_USERNAME"].nil?
+    #response[:icon_emoji] = ENV["BOT_ICON"] unless ENV["BOT_ICON"].nil?
     response = response.to_json
   end
 end
